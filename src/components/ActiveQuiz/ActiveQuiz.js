@@ -7,12 +7,15 @@ function ActiveQuiz(props) {
     <div className="ActiveQuiz">
       <p className="Question">
         <span>
-          <strong>2.</strong>&nbsp; How are you?
+          <strong>2.</strong>&nbsp; {props.question}
         </span>
 
         <small>4 out of 12</small>
       </p>
-      <AnswersList answers={props.answers}></AnswersList>
+      <AnswersList
+        answers={props.answers}
+        onAnswerClick={props.onAnswerClick}
+      ></AnswersList>
     </div>
   );
 }
