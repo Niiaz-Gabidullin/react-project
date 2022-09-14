@@ -7,10 +7,12 @@ function ActiveQuiz(props) {
     <div className="ActiveQuiz">
       <p className="Question">
         <span>
-          <strong>2.</strong>&nbsp; {props.question}
+          <strong>{props.answerNumber}.</strong>&nbsp; {props.question}
         </span>
 
-        <small>4 out of 12</small>
+        <small>
+          {props.answerNumber} out of {props.quizLength}
+        </small>
       </p>
       <AnswersList
         answers={props.answers}
