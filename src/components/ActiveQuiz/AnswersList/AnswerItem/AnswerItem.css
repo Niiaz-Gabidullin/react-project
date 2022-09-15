@@ -9,3 +9,11 @@
   background: rgba(255, 255, 255, 0.2);
   transition: background 0.3s ease-in-out;
 }
+
+.AnswerItem.succes {
+  background-color: rgb(44, 158, 78);
+}
+
+.AnswerItem.error {
+  background-color: rgb(172, 97, 97);
+}

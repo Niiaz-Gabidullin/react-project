@@ -15,6 +15,7 @@ function ActiveQuiz(props) {
         </small>
       </p>
       <AnswersList
+        state={props.state}
         answers={props.answers}
         onAnswerClick={props.onAnswerClick}
       ></AnswersList>
