@@ -1,8 +1,8 @@
 import React from "react";
 import "./FinishedQuiz.css";
+import Button from "../UI/Button/Button";
 
 const FinishedQuiz = (props) => {
-  const style = { width: "100px", cursor: "pointer" };
   const successCount = Object.keys(props.results).reduce((total, key) => {
     if (props.results[key] === "success") {
       total++;
@@ -39,9 +39,10 @@ const FinishedQuiz = (props) => {
         {successCount} out of {props.quiz.length}
       </p>
       <div>
-        <button onClick={props.onRetry} style={style}>
+        <Button onClick={props.onRetry} type="primary">
           Repeat
-        </button>
+        </Button>
+        <Button type="success">Go to test list</Button>
       </div>
     </div>
   );
